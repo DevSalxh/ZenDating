@@ -13,6 +13,10 @@
         "@schematics/angular:service": {
           "skipTests": true,
           "path": "src/core/services"
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true,
+          "path": "src/core/guards"
         }
       },
       "root": "",
@@ -61,8 +65,8 @@
         "serve": {
           "options": {
             "ssl": true,
-            "sslCert": "./ssl/localhost.pem",
-            "sslKey": "./ssl/localhost-key.pem"
+            "sslCert": "./localhost+2.pem",
+            "sslKey": "./localhost+2-key.pem"
           },
           "builder": "@angular/build:dev-server",
           "configurations": {
@@ -95,5 +99,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
